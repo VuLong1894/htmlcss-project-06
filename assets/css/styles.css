@@ -391,30 +391,36 @@ textarea {
   margin-top: 16px;
 }
 
-/* Payment */
-.payment {
-  padding-top: 80px;
+/* Payment, Transfer */
+.payment,
+.transfer {
+  padding: 80px 0px;
 }
 
-.payment__inner {
+.payment__inner,
+.transfer__inner {
   display: flex;
   align-items: center;
   column-gap: 130px;
 }
 
-.payment__content {
+.payment__content,
+.transfer__content {
   width: 40%;
 }
 
-.payment__list {
+.payment__list,
+.transfer__list {
   margin-top: 28px;
 }
 
-.payment__item:first-of-type {
+.payment__item:first-of-type,
+.transfer__item:first-of-type {
   margin-top: 28px;
 }
 
-.payment__item {
+.payment__item,
+.transfer__item {
   position: relative;
   margin-top: 18px;
   color: #212832;
@@ -424,7 +430,8 @@ textarea {
   padding-left: 24px;
 }
 
-.payment__item::before {
+.payment__item::before,
+.transfer__item::before {
   position: absolute;
   content: "";
   top: 50%;
@@ -436,8 +443,9 @@ textarea {
   transform: translateY(-50%);
 }
 
-.payment__btn {
-  margin-top: 53px;
+.payment__btn,
+.transfer__btn {
+  margin-top: 38px;
 }
 
 .payment-media__wrap {
@@ -617,4 +625,73 @@ textarea {
   font-size: 1.8rem;
   font-weight: 600;
   line-height: normal;
+}
+
+/* Transfer media */
+.transfer__media {
+  width: 49%;
+}
+
+.transfer__media-wrap {
+  position: relative;
+  max-width: 470px;
+  height: 600px;
+}
+
+.transfer__media-bg {
+  position: absolute;
+  display: block;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.transfer__media-img {
+  position: absolute;
+  display: block;
+  width: 88%;
+  left: 29px;
+  bottom: 0;
+}
+
+.transfer__list-logo {
+  position: absolute;
+
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 44px 48px rgba(0, 0, 0, 0.1);
+  right: -74px;
+  bottom: 57px;
+}
+
+.transfer__list-logo-wrap {
+  padding: 28px;
+  max-width: 100%;
+}
+
+.transfer__list-logo-title {
+  color: #212832;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+}
+
+.transfer__list-logo-image {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.money__logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #7264d6;
+  position: absolute;
+  right: -100px;
+  bottom: 222px;
 }
