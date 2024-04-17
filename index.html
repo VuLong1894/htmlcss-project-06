@@ -50,7 +50,7 @@
       <div class="container">
         <div class="header__inner">
           <div class="header__bar">
-            <a href="/">
+            <a href="#">
               <img
                 src="./assets/img/logo.svg"
                 alt="CeloBank"
@@ -60,16 +60,16 @@
             <nav class="navbar">
               <ul class="navbar__list">
                 <li class="navbar__item">
-                  <a href="/" class="navbar__link navbar__link--active">Home</a>
+                  <a href="#" class="navbar__link navbar__link--active">Home</a>
                 </li>
                 <li class="navbar__item">
-                  <a href="#!" class="navbar__link">Products</a>
+                  <a href="#product" class="navbar__link">Products</a>
                 </li>
                 <li class="navbar__item">
-                  <a href="#!" class="navbar__link">Features</a>
+                  <a href="#feature" class="navbar__link">Features</a>
                 </li>
                 <li class="navbar__item">
-                  <a href="#!" class="navbar__link">Blog</a>
+                  <a href="#blog" class="navbar__link">Blog</a>
                 </li>
               </ul>
             </nav>
@@ -83,7 +83,7 @@
     </header>
 
     <!-- Main -->
-    <main style="height: 8000px">
+    <main>
       <!-- Hero -->
       <section class="hero">
         <div class="container">
@@ -101,10 +101,12 @@
               <form action="#" class="hero-subcribe__form">
                 <input
                   type="email"
-                  name="email"
-                  id="email"
+                  name="hero_email"
+                  id="hero_email"
                   placeholder="Your email address"
                   class="hero-subcribe__input"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                  required
                 />
                 <button type="submit" class="btn hero-subcribe__btn">
                   Get Started
@@ -146,7 +148,7 @@
       </section>
 
       <!-- How it works -->
-      <section class="operation">
+      <section class="operation" id="product">
         <div class="container">
           <div class="operation__inner">
             <div class="operation__media">
@@ -243,7 +245,7 @@
       </section>
 
       <!-- Payment -->
-      <section class="payment">
+      <section class="payment" id="feature">
         <div class="container">
           <div class="payment__inner">
             <section class="payment__content">
@@ -589,7 +591,7 @@
       </section>
 
       <!-- Blog -->
-      <section class="blog">
+      <section class="blog" id="blog">
         <div class="container">
           <section class="blog__top">
             <div class="blog__content">
@@ -868,5 +870,86 @@
         </div>
       </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <a href="/">
+            <img src="./assets/img/logo.svg" alt="CeloBank" class="logo_img" />
+          </a>
+          <section class="footer__column">
+            <h3 class="footer_column-header">Sitemap</h3>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Home</a>
+              </li>
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Abouts</a>
+              </li>
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Growers</a>
+              </li>
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Merchants</a>
+              </li>
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Contact</a>
+              </li>
+            </ul>
+          </section>
+          <section class="footer__column">
+            <h3 class="footer_column-header">Socials</h3>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Facebook</a>
+              </li>
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Linkedin</a>
+              </li>
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Instagram</a>
+              </li>
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Twitter</a>
+              </li>
+            </ul>
+          </section>
+          <section class="footer__column">
+            <div class="footer__row">
+              <h3 class="footer_row-header">Head Office</h3>
+              <p class="footer_row-content">
+                Xilliams Corner Wine © 2017. 1112 A Market St # Ste B22,
+                Charlottesville, CA 45565
+              </p>
+            </div>
+            <div class="footer__row">
+              <h3 class="footer_row-header">News letter</h3>
+              <form action="#" class="subcribe__form">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="footer__subcribe"
+                  placeholder="Email address..."
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                  required
+                />
+                <button type="submit" class="btn btn__subcribe">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </section>
+        </div>
+        <div class="footer__contact">
+          <p class="contact__email">email@gmail.com</p>
+          <p class="tel">(123) 456-7890</p>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <p>© 2020 Ligft Media All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>
