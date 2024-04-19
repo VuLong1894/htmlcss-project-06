@@ -43,12 +43,28 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <!-- Animate -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Header -->
     <header class="header">
       <div class="container">
         <div class="header__inner">
+          <!-- Header menu  -->
+          <label for="menu__checkbox" class="menu__header">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="16"
+              viewBox="0 0 18 16"
+              fill="none"
+            >
+              <rect width="18" height="2" fill="currentColor" />
+              <rect y="7" width="18" height="2" fill="currentColor" />
+              <rect y="14" width="18" height="2" fill="currentColor" />
+            </svg>
+          </label>
           <div class="header__bar">
             <a href="#">
               <img
@@ -58,7 +74,7 @@
               />
             </a>
             <nav class="navbar">
-              <ul class="navbar__list">
+              <ul class="navbar__list" id="pc-nav">
                 <li class="navbar__item">
                   <a href="#" class="navbar__link navbar__link--active">Home</a>
                 </li>
@@ -71,10 +87,16 @@
                 <li class="navbar__item">
                   <a href="#blog" class="navbar__link">Blog</a>
                 </li>
+                <li class="navbar__item only-mobile">
+                  <a href="#!" class="navbar__link">Log in</a>
+                </li>
+                <li class="navbar__item only-mobile">
+                  <a href="#!" class="navbar__link">Sign up</a>
+                </li>
               </ul>
             </nav>
           </div>
-          <div class="header__cta">
+          <div class="header__cta hide-on-mobile">
             <a href="#!" class="cta_link">Log in</a>
             <a href="#!" class="btn btn-signup">Sign up</a>
           </div>
@@ -82,13 +104,37 @@
       </div>
     </header>
 
+    <!-- Mobile & tablet header -->
+    <header class="mobile-header only-mobile">
+      <!-- Menu checkbox -->
+      <input
+        type="checkbox"
+        name="menu__checkbox"
+        class="menu__checkbox"
+        id="menu__checkbox"
+        hidden
+      />
+      <!-- Menu overlay -->
+      <label for="menu__checkbox" class="menu__overlay"></label>
+
+      <!-- Menu drawer -->
+      <div class="menu__drawer">
+        <img src="./assets/img/logo.svg" alt="CeloBank" />
+        <ul class="navbar__list" id="mobile-nav"></ul>
+        <script>
+          const pcNav = document.querySelector("#pc-nav");
+          const mobileNav = document.querySelector("#mobile-nav");
+          mobileNav.innerHTML = pcNav.innerHTML;
+        </script>
+      </div>
+    </header>
     <!-- Main -->
     <main>
       <!-- Hero -->
       <section class="hero">
         <div class="container">
           <div class="hero__inner">
-            <section class="hero-content">
+            <section class="hero-content" data-aos="fade-left">
               <p class="section-title">Digital Smart Wallet</p>
               <h2 class="section-heading hero-content__heading">
                 Digital <span>Payment</span> For Everyone.
@@ -116,7 +162,7 @@
                 *We'll respect the inbox and never share your email.
               </p>
             </section>
-            <div class="hero-media">
+            <div class="hero-media" data-aos="fade-right">
               <!-- Hero image mobile -->
               <figure class="hero-media__image-wrap">
                 <img
@@ -152,7 +198,12 @@
         <div class="container">
           <div class="operation__inner">
             <div class="operation__media">
-              <figure class="operation__media-image-wrap">
+              <figure
+                class="operation__media-image-wrap"
+                data-aos="fade-right"
+                data-aos-anchor-placement="top-center"
+                data-aos-duration="1000"
+              >
                 <img
                   src="./assets/img/operation-background.png"
                   alt="How it works"
@@ -201,7 +252,12 @@
                     fill="#7264D6"
                   />
                 </svg>
-                <div class="operation__media-notify">
+                <div
+                  class="operation__media-notify"
+                  data-aos="zoom-out-up"
+                  data-aos-anchor-placement="top-center"
+                  data-aos-duration="3000"
+                >
                   <div class="notify-check-wrap">
                     <img
                       src="./assets/img/check-01.svg"
@@ -218,24 +274,56 @@
             </div>
             <section class="operation__content">
               <p class="section-title operation__title">Digital Smart Wallet</p>
-              <h2 class="section-heading operation__heading">How It Works</h2>
-              <h3 class="operation__method">
+              <h2
+                class="section-heading operation__heading"
+                data-aos="zoom-out-left"
+                data-aos-duration="2500"
+              >
+                How It Works
+              </h2>
+              <h3
+                class="operation__method"
+                data-aos="zoom-out-left"
+                data-aos-duration="2600"
+              >
                 1. Open a High Interest Checking account
               </h3>
-              <p class="section-desc operation__desc">
+              <p
+                class="section-desc operation__desc"
+                data-aos="zoom-out-left"
+                data-aos-duration="2700"
+              >
                 Fund your bank account with a minimum balance of $100. Enroll in
                 3 minutes or less!
               </p>
-              <h3 class="operation__method">
+              <h3
+                class="operation__method"
+                data-aos="zoom-out-left"
+                data-aos-duration="2800"
+              >
                 2. 10 point-of-sale transactions each Month that are at least
                 $10 each.
               </h3>
-              <p class="operation__desc">
+              <p
+                class="operation__desc"
+                data-aos="zoom-out-left"
+                data-aos-duration="2900"
+              >
                 Be sure to use your rewards checking account as often as
                 possible in order to accue APYI
               </p>
-              <h3 class="operation__method">3. Receive up to 5.50% APY</h3>
-              <p class="operation__desc">
+              <h3
+                class="operation__method"
+                data-aos="zoom-out-left"
+                data-aos-duration="3000"
+              >
+                3. Receive up to 5.50% APY
+              </h3>
+              <p
+                class="operation__desc"
+                data-aos="zoom-out-left"
+                data-aos-duration="3100"
+              >
                 The APY you earn will be based on your account balance and
                 satisfying the transaction requirement.
               </p>
@@ -248,7 +336,11 @@
       <section class="payment" id="feature">
         <div class="container">
           <div class="payment__inner">
-            <section class="payment__content">
+            <section
+              class="payment__content"
+              data-aos="zoom-out-left"
+              data-aos-duration="3000"
+            >
               <p class="section-title">Digital Smart Wallet</p>
               <h2 class="section-heading">One Card For All Your Payments</h2>
               <p class="section-desc">
@@ -257,13 +349,41 @@
                 the best platform.
               </p>
               <ul class="payment__list">
-                <li class="payment__item">Global Payments</li>
-                <li class="payment__item">One-Click Purchase</li>
-                <li class="payment__item">Friendly Price</li>
+                <li
+                  class="payment__item"
+                  data-aos="zoom-out-left"
+                  data-aos-duration="3200"
+                >
+                  Global Payments
+                </li>
+                <li
+                  class="payment__item"
+                  data-aos="zoom-out-left"
+                  data-aos-duration="3300"
+                >
+                  One-Click Purchase
+                </li>
+                <li
+                  class="payment__item"
+                  data-aos="zoom-out-left"
+                  data-aos-duration="3400"
+                >
+                  Friendly Price
+                </li>
               </ul>
-              <a href="#!" class="btn payment__btn">Get Started</a>
+              <a
+                href="#!"
+                class="btn payment__btn"
+                data-aos="zoom-out-left"
+                data-aos-duration="3500"
+                >Get Started</a
+              >
             </section>
-            <div class="payment-media">
+            <div
+              class="payment-media"
+              data-aos="zoom-out-left"
+              data-aos-duration="3800"
+            >
               <div class="payment-media__wrap">
                 <div class="payemnt-card">
                   <div class="payment-card__row">
@@ -342,7 +462,12 @@
       <section class="transfer">
         <div class="container">
           <div class="transfer__inner">
-            <div class="transfer__media">
+            <div
+              class="transfer__media"
+              data-aos="flip-left"
+              data-aos-anchor-placement="top-center"
+              data-aos-duration="1000"
+            >
               <figure class="transfer__media-wrap">
                 <img
                   src="./assets/img/transfer-bg.png"
@@ -402,7 +527,12 @@
                 </div>
               </figure>
             </div>
-            <section class="transfer__content">
+            <section
+              class="transfer__content"
+              data-aos="flip-right"
+              data-aos-anchor-placement="top-center"
+              data-aos-duration="2000"
+            >
               <p class="section-title">Digital Smart Wallet</p>
               <h2 class="section-heading">One Card For All Your Payments</h2>
               <p class="section-desc">
@@ -848,21 +978,29 @@
                   src="./assets/img/app-decor.svg"
                   alt="App decor"
                   class="app__decor"
+                  data-aos="zoom-out"
+                  data-aos-duration="2000"
                 />
                 <img
                   src="./assets/img/app-decor.svg"
                   alt="App decor"
                   class="app__decor"
+                  data-aos="zoom-out"
+                  data-aos-duration="2000"
                 />
                 <img
                   src="./assets/img/app-decor.svg"
                   alt="App decor"
                   class="app__decor"
+                  data-aos="zoom-out"
+                  data-aos-duration="2000"
                 />
                 <img
                   src="./assets/img/app-decor.svg"
                   alt="App decor"
                   class="app__decor"
+                  data-aos="zoom-out"
+                  data-aos-duration="2000"
                 />
               </div>
             </div>
@@ -876,7 +1014,11 @@
       <div class="container">
         <div class="footer__inner">
           <a href="/">
-            <img src="./assets/img/logo.svg" alt="CeloBank" class="logo_img" />
+            <img
+              src="./assets/img/logo.svg"
+              alt="CeloBank"
+              class="logo_img logo_img-footer"
+            />
           </a>
           <section class="footer__column">
             <h3 class="footer_column-header">Sitemap</h3>
@@ -951,5 +1093,9 @@
         <p>© 2020 Ligft Media All rights reserved.</p>
       </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

@@ -924,21 +924,17 @@ textarea {
 
 .blog-item__content {
   padding: 10px 0;
+  margin-top: 10px;
+  color: #212832;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
 }
 
 .blog-item__date {
   color: #696d76;
   font-size: 1.4rem;
   line-height: 1.71;
-}
-
-.blog-item__content {
-  margin-top: 10px;
-  width: 332px;
-  color: #212832;
-  font-size: 1.8rem;
-  font-weight: 600;
-  line-height: 1.67;
 }
 
 .blog-item__more {
